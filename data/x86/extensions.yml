@@ -1,0 +1,11 @@
+- id: mmx
+  name: MMX
+  header: mmintrin.h
+  compiler_flags:
+    gnu: -mmmx
+- id: sse
+  name: SSE
+  header: xmmintrin.h
+  compiler_flags:
+    gnu: -msse
+

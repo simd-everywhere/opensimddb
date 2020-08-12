@@ -1,0 +1,52 @@
+- name: _mm_extract_pi16
+  arguments:
+  - name: a
+    type: __m64
+  - name: n
+    type: int
+  return:
+    type: int
+- name: _mm_insert_pi16
+  arguments:
+  - name: a
+    type: __m128i
+  - name: i
+    type: int
+  - name: imm8
+    type: int
+  return:
+    type: __m128i
+- name: _mm_load_ps1
+  arguments:
+  - name: mem_addr
+    type: float
+    const: true
+    array: 1
+  return:
+    type: __m128
+- name: _mm_prefetch
+  arguments:
+  - name: p
+    type: char
+    const: true
+    pointer: 1
+  - name: i
+    type: int
+- name: _mm_shuffle_pi16
+  arguments:
+  - name: a
+    type: __m64
+  - name: imm8
+    type: int
+  return:
+    type: __m64
+- name: _mm_shuffle_ps
+  arguments:
+  - name: a
+    type: __m128
+  - name: b
+    type: __m128
+  - name: imm8
+    type: unsigned int
+  return:
+    type: __m128
